@@ -2,12 +2,28 @@
     <form @submit.prevent="addPost">
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" id="title" class="form-control" placeholder="Enter title" v-model="post.title">
+            <input
+                    type="text"
+                    id="title"
+                    class="form-control"
+                    placeholder="Enter title"
+                    v-model="post.title"
+                    minlength="2"
+                    required
+            aaaaaaaa>
         </div>
         <div class="form-group">
             <label for="textarea">Text</label>
             <div class="form-group">
-                <textarea class="form-control" id="textarea" rows="3" v-model="post.text" placeholder="Text"/>
+                <textarea
+                        class="form-control"
+                        id="textarea"
+                        rows="3"
+                        v-model="post.text"
+                        placeholder="Text"
+                        maxlength="300"
+                        required
+                />
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
