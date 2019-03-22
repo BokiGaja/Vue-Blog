@@ -10,7 +10,7 @@ class Posts {
     }
 
     get(id) {
-        return httpService.get('posts/' + id)
+        return httpService.get('posts/' + id + '?filter={"include": ["comments"]}')
     }
 
     edit(id, post) {
@@ -19,6 +19,10 @@ class Posts {
 
     delete(id) {
         return httpService.delete('posts/'+id);
+    }
+
+    addComment(comment, postId) {
+        return httpService.post('posts/'+postId+'/comments', comment)
     }
 }
 

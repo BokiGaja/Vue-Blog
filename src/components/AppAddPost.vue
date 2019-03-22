@@ -10,7 +10,7 @@
                     v-model="post.title"
                     minlength="2"
                     required
-            aaaaaaaa>
+            >
         </div>
         <div class="form-group">
             <label for="textarea">Text</label>
