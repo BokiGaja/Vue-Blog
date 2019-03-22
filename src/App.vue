@@ -8,6 +8,7 @@
 
 <script>
 import Navbar from './layouts/AppNavbar'
+
 export default {
   name: 'app',
   components: {
