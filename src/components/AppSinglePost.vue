@@ -1,5 +1,7 @@
 <template>
-    <app-card :posts="posts" />
+    <app-card :posts="posts">
+        <router-link :to="{name: 'posts'}" class="btn btn-primary">Go back</router-link>
+    </app-card>
 </template>
 
 <script>

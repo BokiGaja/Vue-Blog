@@ -5,7 +5,7 @@ class Posts {
         return httpService.get('posts');
     }
 
-    createCar(post) {
+    createPost(post) {
         return httpService.post('posts', post)
     }
 

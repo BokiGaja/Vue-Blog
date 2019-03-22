@@ -16,9 +16,6 @@
 
 <script>
     export default {
-        props: ['posts'],
-        created() {
-            console.log(this.post)
-        }
+        props: ['posts']
     }
 </script>

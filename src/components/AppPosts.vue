@@ -6,6 +6,10 @@
                     type="button"
                     :to="{name: 'showPost', params: {id: postProps.post.id}}"
             >View post</router-link>
+            <router-link
+                    class="btn btn-danger"
+                    type="button"
+                    :to="{name: 'editPost', params: {id: postProps.post.id}}">Edit</router-link>
         </div>
     </app-card>
 </template>
