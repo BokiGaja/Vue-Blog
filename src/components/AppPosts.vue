@@ -10,6 +10,7 @@
                     class="btn btn-danger"
                     type="button"
                     :to="{name: 'editPost', params: {id: postProps.post.id}}">Edit</router-link>
+            <button class="btn btn-dark" @click="deletePost(postProps.post.id)">Delete post</button>
         </div>
     </app-card>
 </template>
@@ -26,6 +27,13 @@
 
         components: {
             appCard: Card
+        },
+
+        methods: {
+            deletePost(id) {
+                postsService.delete(id);
+                this.posts.filter(post => post.id !== id);
+            }
         },
 
         async created() {
