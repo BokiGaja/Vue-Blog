@@ -32,7 +32,7 @@
         methods: {
             deletePost(id) {
                 postsService.delete(id);
-                this.posts.filter(post => post.id !== id);
+                this.posts = this.posts.filter(post => post.id !== id);
             }
         },
 

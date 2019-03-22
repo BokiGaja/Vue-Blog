@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="addComment" style="margin-top: 50px">
+    <form @submit.prevent="addComment" style="margin: 50px auto; width: 400px">
         <div class="form-group">
             <label for="textarea">Comment</label>
             <div class="form-group">

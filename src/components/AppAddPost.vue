@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="addPost">
+    <form @submit.prevent="addPost" style="width: 400px; margin: 30px auto">
         <div class="form-group">
             <label for="title">Title</label>
             <input

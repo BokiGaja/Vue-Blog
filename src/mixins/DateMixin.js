@@ -6,7 +6,7 @@ export const formatDate = {
         },
 
         diffForHumans(str) {
-            return moment(str).startOf('hour').fromNow()
+            return moment(str).startOf('minute').fromNow()
         }
     }
 };
