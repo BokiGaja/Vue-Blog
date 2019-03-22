@@ -1,5 +1,13 @@
 <template>
-    <app-card :posts="posts"/>
+    <app-card :posts="posts" slot-scope="postProps">
+        <div slot-scope="postProps">
+            <router-link
+                    class="btn btn-primary"
+                    type="button"
+                    :to="{name: 'showPost', params: {id: postProps.post.id}}"
+            >View post</router-link>
+        </div>
+    </app-card>
 </template>
 
 <script>
