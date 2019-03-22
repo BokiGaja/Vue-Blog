@@ -8,14 +8,18 @@
             <p class="card-text">{{ post.text }}</p>
         </div>
         <div class="card-footer text-muted">
-            Created at: {{ post.createdAt }}
+            Created at: {{ post.createdAt | formatDate | diffForHumans}}
         </div>
         </div>
     </div>
 </template>
 
 <script>
+    import { formatDate } from "../mixins/DateMixin";
     export default {
-        props: ['posts']
+        props: ['posts'],
+
+        mixins: [formatDate],
+
     }
 </script>

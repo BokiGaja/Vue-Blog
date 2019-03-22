@@ -15,7 +15,9 @@
 <script>
     import Card from './AppCard';
     import { postsService } from "../services/Posts";
-    import AddComment from './AppAddComment'
+    import AddComment from './AppAddComment';
+    import { formatDate } from "../mixins/DateMixin";
+
     export default {
         data() {
             return {
