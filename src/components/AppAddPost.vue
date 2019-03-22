@@ -37,7 +37,6 @@
     export default {
         data() {
             return {
-                editing: false,
                 post: {
                     title: '',
                     text: ''
@@ -47,7 +46,7 @@
 
         methods: {
             addPost() {
-                if (this.editing) {
+                if (this.$route.params.id) {
                     postsService.edit(this.post.id, this.post);
                     this.$router.push('/posts');
                 } else {
@@ -63,7 +62,6 @@
                 const {data} = await postsService.get(this.$route.params.id);
                 this.post = data;
                 console.log(this.post);
-                this.editing = true;
             }
         }
     }

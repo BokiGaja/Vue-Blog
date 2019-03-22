@@ -5,8 +5,8 @@
                 <div class="card-body">
                     <div class="row"></div>
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <slot :post="post"></slot>
                     <p class="card-text">{{ post.text }}</p>
+                    <slot :post="post"></slot>
                 </div>
                 <div class="card-footer text-muted">
                     Created at: {{ post.createdAt | formatDate | diffForHumans}}
