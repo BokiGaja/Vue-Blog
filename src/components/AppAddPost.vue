@@ -11,6 +11,7 @@
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
     </form>
 </template>
 
